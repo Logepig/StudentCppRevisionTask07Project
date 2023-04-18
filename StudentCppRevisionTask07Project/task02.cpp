@@ -22,5 +22,19 @@
  */
 
 string task02(int a, int b, int c) {	
-	return "a b c";
+	int temp;
+	for (int i = 0; i < 3; i++) {
+		if (a > b) {
+			temp = a;
+			a = b;
+			b = temp;
+		}
+		if (b > c) {
+			temp = b;
+			b = c;
+			c = temp;
+		}
+	}
+	
+	return to_string(a) + " " + to_string(b) + " " + to_string(c);
 }

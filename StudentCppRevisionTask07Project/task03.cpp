@@ -34,5 +34,11 @@
  */
 
 bool task03(int x, int y, int z, int a, int b, int c) {
+	if (x < 1 || y < 1 || z < 1 || a < 1 || b < 1 || c < 1) {
+		return false;
+	}
+	if ((x <= a && y <= b && z <= c) || (x <= b && y <= a && z <= c) || (x <= c && y <= a && z <= b) || (x <= c && y <= b && z <= a) || (x <= a && y <= c && z <= b) || (x <= b && y <= c && z <= a)) {
+		return true;
+	}
 	return false;
 }
